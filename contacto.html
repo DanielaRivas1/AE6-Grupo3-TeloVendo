@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="belleza, bonita, linda" />
+  <title>Tienda de belleza</title>
+  <!--favicon-->
+  <link rel="icon" type="image/jpg" href="assets/img/img-title.png" />
+  <!--fuente de letra-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <!--ABPro-4 - Implementa sobre el proyecto el framework Bootstrap. Usa un CDN para obtener los archivos
+necesarios.
+-->
+  <!--CSS Boostrap 4.3.1-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--CSS-->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!--Fontawesome-->
+  <script src="https://kit.fontawesome.com/27de0eefa2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header class="cu-bg-f48380 p-4 text-center">
+    <h1 class="cu-text-shadow">Embellece</h1>
+  </header>
+  <!--ABPro-4 - Modifica el menú principal, a fin de que se utilice el que viene incorporado en el framework.
+-->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home<span class="d-none d-lg-inline pl-2"> |</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="nosotros.html">Nosotros<span class="d-none d-lg-inline pl-2"> |</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contacto.html">Contacto<span class="d-none d-lg-inline pl-2"> |</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="estadistica.html">Estadistica</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="cu-bg-f7f7f7">
+    <div class="container py-5 text-center">
+      <h2 class="pb-2">Contacto</h2>
+
+      <!--Activamos el alert si se completo ok el form, es decir los 3 campos de entrada son correctos-->
+      <div id="alert-container" class="d-none">
+        <div id="contact-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>Muy Bien!</strong> El formulario fue completado exitosamente.
+          <button id="contact-alert__btn-close" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+      <!--ABPro-5: validar todos los campos del formulario de
+contacto al momento de hacer clic en el botón de procesamiento. Se debe indicar qué campos
+están vacíos-->
+      <!--Para lo anterior vamos a eliminar las validaciones required-->
+      <form id="contact-form" class="contact-form px-5 pt-3 pb-5">
+
+        <div class="form-group mb-4">
+          <label for="name" class="form-label">Nombre de usuario:</label>
+          <input type="text" class="form-control" id="name" placeholder="nombre">
+          <p id="name-error" class="d-none text-danger"></p>
+        </div>
+
+        <!--Dejamos el email como text para que ingrese cualquier texto y no salte el validador por defecto de correo-->
+        <div class="form-group mb-4">
+          <label for="email" class="form-label">Correo:</label>
+          <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+            placeholder="ejemplo@dominio.cl">
+          <div id="emailHelp" class="form-text">Nosotros no compartiremos tu correo electrónico</div>
+          <p id="email-error" class="d-none text-danger"></p>
+        </div>
+
+        <label for="floatingTextarea2">Tu mensaje:</label>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Deja tu comentario aqui" id="floatingTextarea2"
+            style="height: 200px"></textarea>
+          <p id="txt-error" class="d-none text-danger">hi</p>
+        </div>
+
+        <div class="contact-form__btns mt-4 d-flex flex-wrap justify-content-around align-items-center">
+          <button id="form__submit" type="submit" class="btn btn-outline-primary mt-4">Enviar</button>
+          <button id="form__reset" type="reset" class="btn btn-outline-primary mt-4">Restablecer</button>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <footer class="cu-bg-f4838066 text-center py-4">
+    <p><strong> Daniela | Francisca | Marcela | Melissa</strong></p>
+    <p class="mb-0">2022</p>
+  </footer>
+
+  <!--JS Bootstrap 4.3.1-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <!--ABPro-5 llamamos a funciones.js-->
+  <script src="assets/js/funciones.js"></script>
+</body>
+
+</html>

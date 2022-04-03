@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="belleza, bonita, linda" />
+  <title>Tienda de belleza</title>
+  <!--favicon-->
+  <link rel="icon" type="image/jpg" href="assets/img/img-title.png" />
+  <!--fuente de letra-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <!--CSS Boostrap 4.3.1-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--CSS pluggin data table-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+  <!--extension responsive data table ... basicamente me genera elk boton azul -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+  <!--CSS de nostros-->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!--Fontawesome, documentación indica incluirlo en head-->
+  <script src="https://kit.fontawesome.com/27de0eefa2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header class="cu-bg-f48380 p-4 text-center">
+    <h1 class="cu-text-shadow">Embellece</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home<span class="d-none d-lg-inline pl-2"> |</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="nosotros.html">Nosotros<span class="d-none d-lg-inline pl-2"> |</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto<span class="d-none d-lg-inline pl-2"> |</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="estadistica.html">Estadistica</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--ABPro-6 
+  - Crea una nueva página de nombre estadísticas.html
+  - Aplica sobre ésta el mismo estilo de las otras páginas.
+  - Crea una tabla de cinco columnas y al menos diez filas. La idea es que la llenes con datos
+escogidos por el equipo.
+  - Sobre la tabla creada en el punto anterior, aplica el plugin DataTable.
+  - Verifica el resultado obtenido.
+  -->
+  <section class="cu-bg-f7f7f7">
+    <div class="container py-5">
+      <h2>Tabla de estadísticas</h2>
+      <br />
+      <br />
+      <!--Tabla-->
+          <table id="myTable" class="table table-striped table-bordered dt-responsive nowrap w-100">
+            </table>
+    </div>
+  </section>
+
+  <footer class="cu-bg-f4838066 text-center py-4">
+    <p><strong> Daniela | Francisca | Marcela | Melissa</strong></p>
+    <p class="mb-0">2022</p>
+  </footer>
+
+  <!--llamado de Jquery-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <!--llamado de popper-->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <!--llamado JS Bootstrap 4.3.1-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <!--llamdo a funciones.js-->
+  <script src="assets/js/funciones.js"></script>
+  <!--llamado a plugin data table-->
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js">
+  </script>
+  <!--llamando al plugin data table extensión responsiva-->
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js">
+  </script>
+  <!--llamdo al codigo que vamos a crear para usar plugin data table-->
+  <script src="assets/js/dataTableFn.js"></script>
+</body>
+
+</html>

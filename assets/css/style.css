@@ -1,0 +1,99 @@
+/*
+Se dejan solo estilos de colores para validar que la responsividad se realiza solo con bootstrap
+*/
+
+body {
+  font-family: 'Montserrat',
+    sans-serif;
+  min-height: 100vh;
+}
+
+/*textarea no agrandable*/
+textarea {
+  overflow: scroll;
+  resize: none;
+}
+
+/*https://devcode.la/tutoriales/text-shadow-css3/*/
+.cu-text-shadow {
+  color: #FFF;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+  font: italic bold 50px Georgia, Serif;
+  text-shadow: 2px 2px 5px #f48380, -7px 3px 0 #0a0e27;
+}
+
+/*Alineacion*/
+.cu-text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.cu-text-list {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-left: 5em;
+}
+
+/*Colores de fondo*/
+.cu-bg-f48380 {
+  background-color: #f48380;
+}
+
+.cu-bg-f4838066 {
+  background-color: rgba(244, 131, 128, 0.4);
+}
+
+.cu-bg-f7f7f7 {
+  background-color: #f7f7f7;
+}
+
+.cu-bg-white {
+  background-color: red;
+}
+
+/*Altura*/
+.cu-h-180 {
+  height: 180px;
+}
+
+/*añadimos especificidad para modificar colores y no clase Bootstrap*/
+/*botones de formulario de contacto*/
+.contact-form__btns>.btn-outline-primary {
+  color: #f48380;
+  border: 1px solid #f48380;
+}
+
+.contact-form__btns>.btn-outline-primary:hover {
+  background-color: #f48380;
+  border: 1px solid #f48380;
+  color: white;
+}
+
+/*botones personalizados*/
+.cu-btn-pink {
+  background-color: #f48380;
+  border: 1px solid #f48380;
+  color: white;
+}
+
+.cu-btn-pink:hover {
+  color: #f48380;
+  background-color: white;
+  border: 1px solid #f48380;
+}
+
+
+/*navbar a*/
+#navbarSupportedContent>ul>li>a:hover {
+  color: #f48380;
+}
+
+#navbarSupportedContent>ul>li>a>span {
+  color: rgba(0, 0, 0, .9);
+}
+
+#navbarSupportedContent>ul>li>a>span:hover {
+  color: rgba(0, 0, 0, .9);
+}
